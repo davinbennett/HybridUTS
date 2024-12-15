@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.davinbennett.DavinBennettPN_2602154136_UTSHybrid"
     },
     "web": {
       "bundler": "metro",
