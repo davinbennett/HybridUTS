@@ -23,3 +23,8 @@ jobs:
         run: npm ci
       - name: Build on EAS
         run: eas build --platform android --non-interactive --no-wait
+      - name: Upload APK to Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: android-apk
+          path: dist/*.apk
