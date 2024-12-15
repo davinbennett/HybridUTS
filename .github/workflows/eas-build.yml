@@ -21,6 +21,10 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
       - name: Install dependencies
         run: npm ci
+      - name: Install Expo CLI
+        run: npm install -g expo-cli
+      - name: EAS Login
+        run: npx eas login --username ${{ secrets.EXPO_USERNAME }} --password ${{ secrets.EXPO_PASSWORD }}
       - name: Build on EAS
         run: eas build --platform android --non-interactive --no-wait
       - name: Download APK
